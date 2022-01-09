@@ -2,8 +2,14 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-span.userName{
-  min-width:  60px;
+.width50 {
+  display: inline-block;
+  width: 75px;
+  text-align: end;
+}
+
+span{
+  width: 50px;
 }
 a {
   color: #00B7FF;

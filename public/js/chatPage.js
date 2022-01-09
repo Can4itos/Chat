@@ -23,8 +23,8 @@ async function inOut(){
   Messages = Messages.reverse();
  
   let out = document.querySelector("#out");
-  out.innerHTML = Messages.map( (m) => `<div> <span class="userName">${m[0]} : </span> <span>${m[1]}</span> </div>`).join("");
+  out.innerHTML = Messages.map( (m) => `<div> <span class = "width50">${m[0]}</span> <span> : ${m[1]} </span> </div>`).join("");
 }
 setInterval(() => {
   inOut();
-}, 100000);
+}, 1000);
