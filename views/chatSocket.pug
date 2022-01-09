@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  input#chatIn(type="text") 
+  button#chatBut Input 
+  div#container
+  n#out
+  script(src="/js/chatSocket.js")

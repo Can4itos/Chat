@@ -4,10 +4,10 @@ let arr = [];
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    res.render('chatPg', { title: 'chatPg' });
+    res.render('chatHtml', { title: 'chatHtml' });
 });
 router.post('/Message', function(req, res, next) {
-    res.send('chatPg');
+    res.send('OK');
     if(arr.length>4){
         arr.shift();
     }

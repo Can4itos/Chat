@@ -5,7 +5,7 @@ sessionStorage.setItem('nameUser',sessionStorage.getItem('nameUser') || prompt("
 
 chatBut.addEventListener("click", async () => {
   let chatIn = document.querySelector("#chatIn");
-  let response = await fetch('/chatPg/Message', {
+  let response = await fetch('/chatSocket/Message', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'
@@ -18,7 +18,7 @@ chatBut.addEventListener("click", async () => {
 
 inOut();
 async function inOut(){
-  let response = await fetch('/chatPg/Messages');
+  let response = await fetch('/chatSocket/Messages');
   let Messages = await response.json();
   Messages = Messages.reverse();
  

@@ -6,7 +6,9 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var chatPg = require('./routes/chatPg');
+var chatHtmlRoute = require('./routes/chatHtmlRoute');
+var chatSocketRoute = require('./routes/chatSocketRoute');
+
 
 var app = express();
 
@@ -21,7 +23,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/chatPg', chatPg)
+app.use('/chatHtml', chatHtmlRoute)
+app.use('/chatSocket', chatSocketRoute)
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
