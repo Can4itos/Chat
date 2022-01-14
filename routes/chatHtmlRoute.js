@@ -6,6 +6,9 @@ let arr = [];
 router.get('/', function(req, res, next) {
     res.render('chatHtml', { title: 'chatHtml' });
 });
+router.post('/', function(req, res, next) {
+    res.render('chatHtml', { title: 'chatHtml' });
+});
 router.post('/Message', function(req, res, next) {
     res.send('OK');
     if(arr.length>4){
